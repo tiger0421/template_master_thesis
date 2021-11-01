@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  workspace:
+    image: busybox
+    volumes:
+      - ~/Documents/latex:/Documents/latex
+  builder:
+    build: .
+    tty: true
+    working_dir: /Documents/latex
+    volumes_from:
+      - workspace
