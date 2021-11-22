@@ -4,6 +4,7 @@ services:
     image: busybox
     volumes:
       - ~/Documents/latex:/Documents/latex
+      - ../thesis_settings.tex:/Documents/latex/thesis_settings.tex
   builder:
     build: .
     tty: true
