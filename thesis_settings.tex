@@ -1,0 +1,96 @@
+
+\newif\ifsettingsguard
+\ifsettingsguard
+\else
+
+	\settingsguardtrue
+
+	\usepackage[utf8]{inputenc}
+	\usepackage[numbers]{natbib}
+	\usepackage[dvipdfmx,hypertexnames=false]{hyperref}
+
+	\usepackage{
+		listings,
+		subfigure,
+		subfiles,
+		auxhook,
+		docmute,
+		setspace,
+		amsmath,
+		amsfonts,
+		geometry,
+		here,
+		float,
+		multirow,
+		pxjahyper,
+		url,
+		ifthen,
+		array,
+		booktabs,
+		etoolbox
+	}
+
+	\usepackage[dvipdfmx]{
+		graphicx,
+		grffile,
+		color
+	}
+
+	%\usepackage[backend=bibtex,style=numeric,natbib=true]{biblatex}
+
+	\hypersetup{
+		colorlinks = true,
+		linkcolor  = black,
+		citecolor  = black,
+		urlcolor   = black,
+		filecolor  = black
+	}
+
+	\renewcommand{\lstlistingname}{Fig. }
+	\lstset{
+		basicstyle		= {\ttfamily},
+		identifierstyle	= {\small},
+		commentstyle	= {\smallitshape},
+		keywordstyle	= {\small\bfseries},
+		ndkeywordstyle	= {\small},
+		stringstyle		= {\small\ttfamily},
+		frame			= {tb},
+		breaklines		= true,
+		columns			= [l]{fullflexible},
+		numbers			= left,
+		xrightmargin	= 0zw,
+		xleftmargin		= 3zw,
+		numberstyle		= {\scriptsize},
+		stepnumber		= 1,
+		numbersep		= 1zw,
+		lineskip		= -0.5ex
+	}
+
+	\def
+		\linesparpage#1{
+			\baselineskip=\textheight\divide\baselineskip by #1
+		}
+
+	\setstretch{1}
+	\selectfont{}
+
+	\renewcommand{\figurename}{
+		\textbf{Fig.}
+	}
+	\renewcommand{\tablename}{
+		\textbf{Table.}
+	}
+	\newcommand{\fref}[1]{
+		\textbf{\figurename\ref{#1}}
+	}
+	\newcommand{\tref}[1]{
+		\textbf{\tablename\ref{#1}}
+	}
+	\newcommand{\eref}[1]{
+		\textbf{式\ref{#1}}
+	}
+	\newcommand{\sref}[1]{
+		\textbf{\ref{#1}章}
+	}
+\fi
+
