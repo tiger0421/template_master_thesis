@@ -9,7 +9,7 @@ services:
       - .textlintrc:/root/.textlintrc
   tex:
     build: .
-    platform: linux/amd64
+    platform: linux/aarch64
     container_name: tex
     tty: true
     working_dir: /Documents/latex

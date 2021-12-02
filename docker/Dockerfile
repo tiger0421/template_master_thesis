@@ -20,7 +20,7 @@ RUN apt update --quiet \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
     && apt install --quiet --no-install-recommends -y \
         nodejs \
-    && npm install -y \
+    && npm install -y -g \
         textlint \
         textlint-filter-rule-comments \
         textlint-plugin-latex2e \
