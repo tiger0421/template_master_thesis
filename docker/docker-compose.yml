@@ -4,9 +4,13 @@ services:
     image: busybox
     volumes:
       - ~/Documents/latex:/Documents/latex
-      - ../thesis_settings.tex:/Documents/latex/thesis_settings.tex
-  builder:
+      - ../thesis_settings.tex:/Documents/latex/thesis/thesis_settings.tex
+      - .latexmkrc:/root/.latexmkrc
+      - .textlintrc:/root/.textlintrc
+  tex:
     build: .
+    platform: linux/amd64
+    container_name: tex
     tty: true
     working_dir: /Documents/latex
     volumes_from:

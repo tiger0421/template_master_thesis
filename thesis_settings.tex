@@ -10,24 +10,25 @@
 	\usepackage[dvipdfmx,hypertexnames=false]{hyperref}
 
 	\usepackage{
-		listings,
-		subfigure,
-		subfiles,
-		auxhook,
-		docmute,
-		setspace,
 		amsmath,
 		amsfonts,
+		array,
+		auxhook,
+		booktabs,
+		docmute,
+		etoolbox,
+		float,
 		geometry,
 		here,
-		float,
-		multirow,
-		pxjahyper,
-		url,
 		ifthen,
-		array,
-		booktabs,
-		etoolbox
+		listings,
+		multirow,
+		newtxtext,
+		pxjahyper,
+		setspace,
+		subcaption,
+		subfiles,
+		url
 	}
 
 	\usepackage[dvipdfmx]{
@@ -75,16 +76,16 @@
 	\selectfont{}
 
 	\renewcommand{\figurename}{
-		\textbf{Fig.}
+		Fig.
 	}
 	\renewcommand{\tablename}{
-		\textbf{Table.}
+		Table.
 	}
 	\newcommand{\fref}[1]{
-		\textbf{\figurename\ref{#1}}
+		\figurename\ref{#1}
 	}
 	\newcommand{\tref}[1]{
-		\textbf{\tablename\ref{#1}}
+		\tablename\ref{#1}
 	}
 	\newcommand{\eref}[1]{
 		\textbf{式\ref{#1}}
