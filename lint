@@ -1,0 +1,2 @@
+#!/bin/bash
+npx textlint -c ~/.textlintrc $1
