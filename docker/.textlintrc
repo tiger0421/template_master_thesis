@@ -9,7 +9,7 @@
                 "periodMark": "．",
             },
             "max-kanji-continuous-len": false,
-            "sentence-length": 100,
+            "sentence-length": false,
         },
         "preset-ja-engineering-paper": {
             "prh": false,
