@@ -14,5 +14,26 @@ RUN apt update --quiet \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt update --quiet \
+    && apt install --quiet --no-install-recommends -y \
+        npm \
+    && npm init -y \
+    && npm install --global \
+        textlint \
+    && textlint --init \
+    && npm cache clean --force \
+    && apt purge -y \
+        npm \
+    && apt clean \
+    && apt autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt update --quiet \
+    && apt install --quiet --no-install-recommends -y \
+        git \
+    && apt clean \
+    && apt autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+
 CMD ["/bin/bash"]
 
