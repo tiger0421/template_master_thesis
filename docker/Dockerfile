@@ -22,8 +22,6 @@ RUN apt update --quiet \
         textlint \
     && textlint --init \
     && npm cache clean --force \
-    && apt purge -y \
-        npm \
     && apt clean \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
