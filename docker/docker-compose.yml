@@ -2,12 +2,15 @@ version: '2.4'
 services:
   workspace:
     image: busybox
+    container_name: latex-workspace
     volumes:
       - ~/Documents/latex:/Documents/latex
       - ../thesis_settings.tex:/Documents/latex/thesis_settings.tex
   builder:
     build: .
+    container_name: latex-builder
     tty: true
+    restart: always
     working_dir: /Documents/latex
     volumes_from:
       - workspace
