@@ -7,7 +7,7 @@ services:
       - ../thesis_settings.tex:/Documents/latex/thesis/thesis_settings.tex
       - .latexmkrc:/root/.latexmkrc
       - .textlintrc:/root/.textlintrc
-      - ../lint:/usr/local/bin
+      - ../lint:/usr/local/bin/lint
   tex:
     build: .
     platform: linux/aarch64
