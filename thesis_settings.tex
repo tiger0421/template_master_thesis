@@ -5,9 +5,21 @@
 
 	\settingsguardtrue
 
+	\usepackage[dvipdfmx]{
+		graphicx,
+		grffile,
+		color
+	}
+	\usepackage{
+		pgf,
+		tikz,
+		circuitikz,
+		siunitx
+	}
+	\usetikzlibrary{babel}
+
 	\usepackage[utf8]{inputenc}
 	\usepackage[numbers]{natbib}
-	\usepackage[dvipdfmx,hypertexnames=false]{hyperref}
 
 	\usepackage{
 		listings,
@@ -22,18 +34,20 @@
 		here,
 		float,
 		multirow,
-		pxjahyper,
 		url,
 		ifthen,
 		array,
 		booktabs,
-		etoolbox
+		etoolbox,
+		footnote,
+		caption
 	}
 
-	\usepackage[dvipdfmx]{
-		graphicx,
-		grffile,
-		color
+	\usepackage[dvipdfmx,hypertexnames=false]{
+		hyperref,
+	}
+	\usepackage{
+		pxjahyper
 	}
 
 	\hypersetup{
