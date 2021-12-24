@@ -20,10 +20,12 @@ RUN apt update --quiet \
     && npm init -y \
     && npm install --global \
         textlint \
+        textlint-plugin-latex2e \
+        textlint-filter-rule-comments \
         textlint-rule-preset-ja-spacing \
         textlint-rule-preset-ja-technical-writing \
         textlint-rule-spellcheck-tech-word \
-    && textlint --init \
+        textlint-rule-preset-ja-engineering-paper \
     && npm cache clean --force \
     && apt clean \
     && apt autoremove -y \
