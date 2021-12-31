@@ -41,7 +41,9 @@
 		booktabs,
 		etoolbox,
 		footnote,
-		caption
+		caption,
+		algorithm,
+		algorithmic
 	}
 
 	\usepackage[dvipdfmx,hypertexnames=false]{
@@ -104,6 +106,9 @@
 	}
 	\newcommand{\sref}[1]{
 		\textbf{\ref{#1}章}
+	}
+	\newcommand{\aref}[1]{
+    	\textbf{Algorithm {\ref{#1}}}
 	}
 \fi
 
