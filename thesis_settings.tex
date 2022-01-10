@@ -30,11 +30,8 @@
 		array,
 		auxhook,
 		booktabs,
-<<<<<<< HEAD
 		colortbl,
-=======
 		caption,
->>>>>>> NaokiTakahashi12-main
 		docmute,
 		etoolbox,
 		float,
@@ -97,11 +94,7 @@
 	\selectfont{}
 
 	\renewcommand{\figurename}{
-<<<<<<< HEAD
 		\textbf{Fig.}
-=======
-        \textbf{Fig.}
->>>>>>> NaokiTakahashi12-main
 	}
 	\renewcommand{\tablename}{
 		\textbf{Table }
@@ -118,21 +111,19 @@
 	\newcommand{\sref}[1]{
 		\textbf{\ref{#1}章}
 	}
-<<<<<<< HEAD
+	\newcommand{\aref}[1]{
+    	\textbf{Algorithm {\ref{#1}}}
+	}
 
 	\AtBeginDocument{
-  \abovedisplayskip     =2\abovedisplayskip
-  \abovedisplayshortskip=2\abovedisplayshortskip
-  \belowdisplayskip     =2\belowdisplayskip
-  \belowdisplayshortskip=2\belowdisplayshortskip
+		\abovedisplayskip     =2\abovedisplayskip
+		\abovedisplayshortskip=2\abovedisplayshortskip
+		\belowdisplayskip     =2\belowdisplayskip
+		\belowdisplayshortskip=2\belowdisplayshortskip
 	}
 
 	\captionsetup[subfigure]{labelformat=simple}
 	\renewcommand{\thesubfigure}{(\alph{subfigure})}
-=======
-	\newcommand{\aref}[1]{
-    	\textbf{Algorithm {\ref{#1}}}
-	}
->>>>>>> NaokiTakahashi12-main
+
 \fi
 
