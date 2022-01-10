@@ -2,6 +2,7 @@ version: '2.4'
 services:
   workspace:
     image: busybox
+    container_name: latex-workspace
     volumes:
       - ~/Documents/latex:/Documents/latex
       - ../thesis_settings.tex:/Documents/latex/thesis/thesis_settings.tex
@@ -13,6 +14,7 @@ services:
     platform: linux/aarch64
     container_name: tex
     tty: true
+    restart: always
     working_dir: /Documents/latex
     volumes_from:
       - workspace

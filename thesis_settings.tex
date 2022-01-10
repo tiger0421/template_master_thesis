@@ -5,20 +5,40 @@
 
 	\settingsguardtrue
 
+	\usepackage[dvipdfmx]{
+		graphicx,
+		grffile,
+		color
+	}
+	\usepackage{
+		pgf,
+		tikz,
+		tikz-3dplot,
+		circuitikz,
+		siunitx
+	}
+	\usetikzlibrary{babel}
+
 	\usepackage[utf8]{inputenc}
 	\usepackage[numbers]{natbib}
-	\usepackage[dvipdfmx,hypertexnames=false]{hyperref}
 
 	\usepackage{
+		algorithm,
+		algorithmic
 		amsmath,
 		amsfonts,
 		array,
 		auxhook,
 		booktabs,
+<<<<<<< HEAD
 		colortbl,
+=======
+		caption,
+>>>>>>> NaokiTakahashi12-main
 		docmute,
 		etoolbox,
 		float,
+		footnote,
 		geometry,
 		here,
 		ifthen,
@@ -33,13 +53,12 @@
 		url
 	}
 
-	\usepackage[dvipdfmx]{
-		graphicx,
-		grffile,
-		color
+	\usepackage[dvipdfmx,hypertexnames=false]{
+		hyperref,
 	}
-
-	%\usepackage[backend=bibtex,style=numeric,natbib=true]{biblatex}
+	\usepackage{
+		pxjahyper
+	}
 
 	\hypersetup{
 		colorlinks = true,
@@ -78,7 +97,11 @@
 	\selectfont{}
 
 	\renewcommand{\figurename}{
+<<<<<<< HEAD
 		\textbf{Fig.}
+=======
+        \textbf{Fig.}
+>>>>>>> NaokiTakahashi12-main
 	}
 	\renewcommand{\tablename}{
 		\textbf{Table }
@@ -95,6 +118,7 @@
 	\newcommand{\sref}[1]{
 		\textbf{\ref{#1}章}
 	}
+<<<<<<< HEAD
 
 	\AtBeginDocument{
   \abovedisplayskip     =2\abovedisplayskip
@@ -105,5 +129,10 @@
 
 	\captionsetup[subfigure]{labelformat=simple}
 	\renewcommand{\thesubfigure}{(\alph{subfigure})}
+=======
+	\newcommand{\aref}[1]{
+    	\textbf{Algorithm {\ref{#1}}}
+	}
+>>>>>>> NaokiTakahashi12-main
 \fi
 
