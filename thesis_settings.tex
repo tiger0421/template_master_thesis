@@ -15,6 +15,7 @@
 		array,
 		auxhook,
 		booktabs,
+		colortbl,
 		docmute,
 		etoolbox,
 		float,
@@ -22,6 +23,7 @@
 		here,
 		ifthen,
 		listings,
+		longtable,
 		multirow,
 		newtxtext,
 		pxjahyper,
@@ -76,16 +78,16 @@
 	\selectfont{}
 
 	\renewcommand{\figurename}{
-		Fig.
+		\textbf{Fig.}
 	}
 	\renewcommand{\tablename}{
-		Table.
+		\textbf{Table }
 	}
 	\newcommand{\fref}[1]{
-		\figurename\ref{#1}
+		\textbf{\figurename\ref{#1}}
 	}
 	\newcommand{\tref}[1]{
-		\tablename\ref{#1}
+		\textbf{\tablename\ref{#1}}
 	}
 	\newcommand{\eref}[1]{
 		\textbf{式\ref{#1}}
@@ -93,5 +95,15 @@
 	\newcommand{\sref}[1]{
 		\textbf{\ref{#1}章}
 	}
+
+	\AtBeginDocument{
+  \abovedisplayskip     =2\abovedisplayskip
+  \abovedisplayshortskip=2\abovedisplayshortskip
+  \belowdisplayskip     =2\belowdisplayskip
+  \belowdisplayshortskip=2\belowdisplayshortskip
+	}
+
+	\captionsetup[subfigure]{labelformat=simple}
+	\renewcommand{\thesubfigure}{(\alph{subfigure})}
 \fi
 
