@@ -5,37 +5,20 @@
 
 	\settingsguardtrue
 
-	\usepackage[dvipdfmx]{
-		graphicx,
-		grffile,
-		color
-	}
-	\usepackage{
-		pgf,
-		tikz,
-		tikz-3dplot,
-		circuitikz,
-		siunitx
-	}
-	\usetikzlibrary{babel}
-
 	\usepackage[utf8]{inputenc}
 	\usepackage[numbers]{natbib}
+	\usepackage[dvipdfmx,hypertexnames=false]{hyperref}
 
 	\usepackage{
-		algorithm,
-		algorithmic
 		amsmath,
 		amsfonts,
 		array,
 		auxhook,
 		booktabs,
 		colortbl,
-		caption,
 		docmute,
 		etoolbox,
 		float,
-		footnote,
 		geometry,
 		here,
 		ifthen,
@@ -50,12 +33,13 @@
 		url
 	}
 
-	\usepackage[dvipdfmx,hypertexnames=false]{
-		hyperref,
+	\usepackage[dvipdfmx]{
+		graphicx,
+		grffile,
+		color
 	}
-	\usepackage{
-		pxjahyper
-	}
+
+	%\usepackage[backend=bibtex,style=numeric,natbib=true]{biblatex}
 
 	\hypersetup{
 		colorlinks = true,
@@ -111,9 +95,6 @@
 	\newcommand{\sref}[1]{
 		\textbf{\ref{#1}章}
 	}
-	\newcommand{\aref}[1]{
-    	\textbf{Algorithm {\ref{#1}}}
-	}
 
 	\AtBeginDocument{
 		\abovedisplayskip     =2\abovedisplayskip
@@ -124,6 +105,4 @@
 
 	\captionsetup[subfigure]{labelformat=simple}
 	\renewcommand{\thesubfigure}{(\alph{subfigure})}
-
 \fi
-
