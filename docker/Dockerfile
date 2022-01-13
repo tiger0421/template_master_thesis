@@ -14,19 +14,27 @@ RUN apt update --quiet \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
+
 RUN apt update --quiet \
     && apt install --quiet --no-install-recommends -y \
-        npm \
+        curl \
+    && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt install --quiet --no-install-recommends -y \
+        nodejs \
     && npm init -y \
-    && npm install --global \
+    && npm install -y -g \
         textlint \
-        textlint-plugin-latex2e \
         textlint-filter-rule-comments \
+        textlint-plugin-latex2e \
+        textlint-rule-preset-ja-engineering-paper \
         textlint-rule-preset-ja-spacing \
         textlint-rule-preset-ja-technical-writing \
+        textlint-rule-preset-jtf-style \
+        textlint-rule-prh \
         textlint-rule-spellcheck-tech-word \
-        textlint-rule-preset-ja-engineering-paper \
     && npm cache clean --force \
+    && apt remove --purge -y \
+        curl \
     && apt clean \
     && apt autoremove -y \
     && rm -rf /var/lib/apt/lists/*
